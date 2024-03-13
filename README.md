@@ -13,6 +13,12 @@
 
 ---
 
+
+
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/e7b91872-f6e2-421c-84d1-99f8ac894d2d)
+
+
+
 ### Задание 2
 
 **Что нужно сделать:**
