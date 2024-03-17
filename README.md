@@ -207,9 +207,13 @@ test:
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/3b2c1869-286f-4448-8035-1a31044cbe59)
 
 ### Проверка
+
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/e2191978-5c03-40e2-8145-4b10161b1768)
+
 #### Без изменения Go файлов
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/43f6cd94-2bcb-41c7-8211-b496153c0d47)
 #### C изменениями Go файлов
+
 
 
 
