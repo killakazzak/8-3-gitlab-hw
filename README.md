@@ -178,7 +178,10 @@ build:
 
 ### Решение Задание 3*
 
+#### Модифицируем CI
+
 ```
+vim /git/sdvps-materials/.gitlab-ci.yml
 stages:
   - build
   - test
@@ -204,7 +207,6 @@ test:
         echo "Skipping tests as it's not a main branch push or web pipeline event."
       fi
 ```
-![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/3b2c1869-286f-4448-8035-1a31044cbe59)
 
 ### Проверка
 
