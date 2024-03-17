@@ -204,6 +204,14 @@ test:
         echo "Skipping tests as it's not a main branch push or web pipeline event."
       fi
 ```
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/3b2c1869-286f-4448-8035-1a31044cbe59)
+
+### Проверка
+#### Без изменения Go файлов
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/43f6cd94-2bcb-41c7-8211-b496153c0d47)
+#### C изменениями Go файлов
+
+
 
 
 
