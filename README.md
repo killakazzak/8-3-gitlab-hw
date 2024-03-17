@@ -134,6 +134,30 @@ git push my_origin_2
 ```
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/d9da5983-f9bc-45a6-89c1-a7b1c23859fe)
 
+```
+vim /git/sdvps-materials/.gitlab-ci.yml
+```
+```
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: golang:1.17
+  script: 
+   - go test .
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
+```
+
+
+
+
 
 ## Дополнительные задания* (со звёздочкой)
 
