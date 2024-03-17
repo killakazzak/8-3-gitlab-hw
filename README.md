@@ -14,12 +14,12 @@
 ---
 
 ### Решение Задание 1
----
+```
 wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install vagrant
 vagrant --version
----
+```
 
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/8540f4d8-6f00-4e69-a3d7-9047085100d7)
 
