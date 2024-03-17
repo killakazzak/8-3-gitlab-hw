@@ -93,7 +93,15 @@ shutdown_timeout = 0
     shm_size = 0
     network_mtu = 0
 ```
+Запускаем gitlab runner
 
+```
+ docker run -d --name gitlab-runner --restart always \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest
+```
 
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/e7b91872-f6e2-421c-84d1-99f8ac894d2d)
 
