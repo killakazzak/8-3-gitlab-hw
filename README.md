@@ -176,5 +176,34 @@ build:
 
 В качестве ответа добавьте в шаблон с решением файл gitlab-ci.yml своего проекта или вставьте код в соответсвующее поле в шаблоне.
 
+### Решение Задание 3*
+
+```
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+    - docker build .
+
+test:
+  stage: test
+  image: golang:1.17
+  script:
+    - |
+      if [[ $CI_COMMIT_REF_NAME == "main" ]] && [[ $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "web" ]]; then
+        if [[ ! -z $(git diff-tree --no-commit-id --name-only -r $CI_COMMIT_SHA -- '*.go') ]]; then
+          go test .
+        else
+          echo "No Go files were changed. Skipping tests."
+        fi
+      else
+        echo "Skipping tests as it's not a main branch push or web pipeline event."
+      fi
+```
+
 
 
