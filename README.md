@@ -125,8 +125,16 @@ docker ps -a
  * файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне; 
  * скриншоты с успешно собранными сборками.
  
- 
----
+### Решение Задание 2
+
+```
+git remote add my_origin_2 http://gitlab.localdomain:8090/my_group/my_project_2.git
+git remote set-url my_origin_2 http://lamos:glpat-CLj1agRTX8Lv5vSXaJgb@gitlab.localdomain:8090/my_group/my_project_2.git
+git push my_origin_2
+```
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/d9da5983-f9bc-45a6-89c1-a7b1c23859fe)
+
+
 ## Дополнительные задания* (со звёздочкой)
 
 Их выполнение необязательное и не влияет на получение зачёта по домашнему заданию. Можете их решить, если хотите лучше разобраться в материале.
