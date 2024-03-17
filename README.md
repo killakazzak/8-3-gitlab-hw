@@ -43,6 +43,56 @@ vagrant --version
 echo '192.168.56.10    gitlab.localdomain gitlab' >> /etc/hosts
 VAGRANT_EXPERIMENTAL="disks" vagrant up
 ```
+#### Создание проекта с репозиторием
+
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/69e6ecc4-2c84-4e84-a40d-27c079e76af6)
+
+
+#### Регистрация Gitlab runner
+
+```
+ docker run -ti --rm --name gitlab-runner \
+     --network host \
+     -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     gitlab/gitlab-runner:latest register
+```
+Меняем конфигурацию gitlab runner
+```
+vim /srv/gitlab-runner/config/config.toml
+```
+```
+concurrent = 1
+check_interval = 0
+connection_max_age = "15m0s"
+shutdown_timeout = 0
+
+[session_server]
+  session_timeout = 1800
+
+
+[[runners]]
+  name = "ubuntu-client.dit.local"
+  url = "http://gitlab.localdomain:8090/"
+  id = 3
+  token = "4A4Cu_xkySsy2wWxK_aC"
+  token_obtained_at = 2024-03-15T14:53:33Z
+  token_expires_at = 0001-01-01T00:00:00Z
+  executor = "docker"
+  [runners.cache]
+    MaxUploadedArchiveSize = 0
+  [runners.docker]
+    tls_verify = false
+    image = "go.1.17"
+    privileged = false
+    disable_entrypoint_overwrite = false
+    oom_kill_disable = false
+    disable_cache = false
+    volumes = ["/cache", "/var/run/docker.sock:/var/run/docker.sock"]
+    extra_hosts = ["gitlab.localdomain:10.159.86.32"]
+    shm_size = 0
+    network_mtu = 0
+```
 
 
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/e7b91872-f6e2-421c-84d1-99f8ac894d2d)
