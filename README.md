@@ -14,15 +14,35 @@
 ---
 
 ### Решение Задание 1
+
+#### Установка Virtualbox
+```
+echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee -a /etc/apt/sources.list
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo apt update
+sudo apt install virtualbox
+vboxmanage --version
+```
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/8c9480c9-bcc7-4e68-b8c5-e8dea537f963)
+
+#### Установка Vagrant
 ```
 wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install vagrant
 vagrant --version
 ```
-
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/8540f4d8-6f00-4e69-a3d7-9047085100d7)
 
+#### Установка Gitlab
+
+Модифицированный Vagranfile https://github.com/killakazzak/8-2-sdvps-materials-hw/blob/main/gitlab/Vagrantfile
+
+```
+echo '192.168.56.10    gitlab.localdomain gitlab' >> /etc/hosts
+VAGRANT_EXPERIMENTAL="disks" vagrant up
+```
 
 
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/e7b91872-f6e2-421c-84d1-99f8ac894d2d)
