@@ -215,6 +215,8 @@ test:
 #### Без изменения Go файлов
 ![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/43f6cd94-2bcb-41c7-8211-b496153c0d47)
 #### C изменениями Go файлов
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/2a3c0497-53ef-4a21-9c7a-802b3a3ac48d)
+
 
 
 
