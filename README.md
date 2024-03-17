@@ -156,6 +156,7 @@ build:
 ```
 
 
+![image](https://github.com/killakazzak/8-3-gitlab-hw/assets/32342205/3f3371f4-8ede-434b-98e3-f3fb9e58c73b)
 
 
 
