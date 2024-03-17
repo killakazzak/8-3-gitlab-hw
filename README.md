@@ -37,7 +37,7 @@ vagrant --version
 
 #### Установка Gitlab
 
-Модифицированный Vagranfile https://github.com/killakazzak/8-2-sdvps-materials-hw/blob/main/gitlab/Vagrantfile
+Модифицированный [Vagranfile](https://github.com/killakazzak/8-2-sdvps-materials-hw/blob/main/gitlab/Vagrantfile)
 
 ```
 echo '192.168.56.10    gitlab.localdomain gitlab' >> /etc/hosts
